@@ -2,7 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 router.get("/" , (req ,res) => {
-    res.send('about')
+    res.render('./about/main')
 })
+
+router.use(express.static("public"));
 
 module.exports = router
